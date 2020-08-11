@@ -2,3 +2,5 @@ __pycache__
 build/
 seeder.egg-info/
 dist/
+.eggs/
+.tox/
