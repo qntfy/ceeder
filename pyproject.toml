@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "ceeder"
-version = "0.0.1"
+version = "0.0.2"
 description = "Library for working with CDR files and analytics."
 authors = ["max thomas <max@qntfy.com>"]
 
