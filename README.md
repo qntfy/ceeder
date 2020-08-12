@@ -5,10 +5,26 @@ and CDR-based analytics simpler.
 
 ## Install as a library
 
+`seeder` is available on [PyPI](https://pypi.org/project/ceeder/).
+
+## Build
+
+[poetry](https://python-poetry.org/) is required to use the project.
+
 Clone the project, then run:
 
 ```shell
-python setup.py install
+poetry build
+```
+
+## Testing
+
+[tox](https://tox.readthedocs.io/en/latest/index.html) is used for testing the
+project.
+
+``` shell
+python -m pip install --upgrade tox
+tox
 ```
 
 ## Usage
