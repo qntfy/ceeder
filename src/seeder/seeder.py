@@ -1,5 +1,3 @@
-#!/usr/bin/env python3
-
 import sys
 import os
 import logging
@@ -10,20 +8,21 @@ import falcon
 from abc import ABC, abstractmethod
 
 
-class Annotator(ABC):
-    '''Annotator is a falcon-based "analytic".
-
-    Implementations must implement one methods:
-
-    on_post(request, response)
-
-    Implementations can also override on_get(req, resp)
-    in order to implement custom health check behavior.
-    '''
+class HealthResource():
+    '''HealthResource supplies a simple Falcon health-check class.'''
 
     def on_get(self, req, resp):
         resp.status = falcon.HTTP_200  # This is the default status
         resp.media = {'status': 'ok'}
+
+
+class Annotator(ABC):
+    '''Annotator is a falcon-based "analytic".
+
+    Implementations must implement one method:
+
+    on_post(request, response)
+    '''
 
 
     @abstractmethod
@@ -33,10 +32,14 @@ class Annotator(ABC):
 
     def create(self,
                health_endpoint='/api/v1/health',
+               health_impl=HealthResource(),
                post_endpoint='/api/v1/annotate/cdr',
     ):
+        '''Create returns a falcon API object, which can be used immediately to
+provide Falcon-based functionality.'''
+
         app = falcon.API()
-        app.add_route(health_endpoint, self)
+        app.add_route(health_endpoint, health_impl)
         app.add_route(post_endpoint, self)
         return app
 

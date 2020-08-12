@@ -23,3 +23,9 @@ def test_get_message(client):
     assert output['type'] == 'tags'
     sample_cdr['annotators'] = output
     validate(sample_cdr)
+
+
+def test_health_check(client):
+    chk = client.simulate_get('/api/v1/health')
+    assert 'status' in chk.json
+    assert chk.json['status'] == 'ok'
