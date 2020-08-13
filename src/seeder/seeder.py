@@ -70,7 +70,41 @@ class TagAnnotator(Annotator):
         logging.debug('incoming text: {}'.format(txt))
         output = {}
         output['content'] = self.annotate_function(txt)
-        output['type'] = "tags"
+        output['type'] = self.annotator_type
+        output['label'] = self.label
+        output['version'] = self.version
+        resp.media = output
+
+
+class FacetAnnotator(Annotator):
+    '''FacetAnnotator takes in a function that produces CDR annotation
+    in the faceted format.
+
+    It uses this function in the on_post method in order to more easily
+    create a tag analytic by handling the web/framework parts. As a result,
+    in order to implement a new tag analytic, one just needs to pass in
+    an annotate_function that produces the right CDR tag output.
+    '''
+    def __init__(self,
+                 annotate_function,
+                 label,
+                 annotator_type='facets',
+                 annotator_class='derived',
+                 version='0.0.1',
+    ):
+        self.annotate_function = annotate_function
+        self.label = label
+        self.annotator_type = annotator_type
+        self.annotator_class = annotator_class
+        self.version = version
+
+
+    def on_post(self, req, resp):
+        request_json = req.media
+        output = {}
+        output['content'] = self.annotate_function(request_json)
+        output['type'] = self.annotator_type
+        output['class'] = self.annotator_class
         output['label'] = self.label
         output['version'] = self.version
         resp.media = output
