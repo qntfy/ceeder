@@ -1,11 +1,15 @@
 # seeder
 
-`seeder` is a library intended to make working with [CDRs](https://github.com/WorldModelers/Document-Schema)
+`ceeder` is a library intended to make working with [CDRs](https://github.com/WorldModelers/Document-Schema)
 and CDR-based analytics simpler.
 
 ## Install as a library
 
-`seeder` is available on [PyPI](https://pypi.org/project/ceeder/).
+`ceeder` is available on [PyPI](https://pypi.org/project/ceeder/).
+
+``` shell
+python -m pip install ceeder
+```
 
 ## Build
 
