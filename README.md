@@ -1,7 +1,17 @@
 # seeder
 
-`ceeder` is a library intended to make working with [CDRs](https://github.com/WorldModelers/Document-Schema)
+
+[![Documentation](https://readthedocs.org/projects/ceeder/badge/?version=latest)](https://ceeder.readthedocs.io/en/latest/?badge=latest)
+
+
+`ceeder` is a library intended to make working with
+[CDRs](https://github.com/WorldModelers/Document-Schema)
 and CDR-based analytics simpler.
+
+## Documentation
+
+Documentation is available on
+[readthedocs.io](https://ceeder.readthedocs.io/en/latest/).
 
 ## Install as a library
 
