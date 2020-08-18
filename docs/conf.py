@@ -10,16 +10,26 @@
 # add these directories to sys.path here. If the directory is relative to the
 # documentation root, use os.path.abspath to make it absolute, like shown here.
 #
-# import os
-# import sys
-# sys.path.insert(0, os.path.abspath('.'))
+import os
+import sys
+sys.path.insert(0, os.path.abspath('..'))
+
+import seeder
 
 
 # -- Project information -----------------------------------------------------
 
-project = 'ceeder'
-copyright = '2020, Max Thomas'
-author = 'Max Thomas'
+project = u'ceeder'
+copyright = u'2020, Qntfy Corporation'
+author = u'Max Thomas'
+
+
+# The version info for the project you're documenting, acts as replacement for
+# |version| and |release|, also used in various other places throughout the
+# built documents.
+#
+# The short X.Y version.
+version = '0.0.3'
 
 
 # -- General configuration ---------------------------------------------------
