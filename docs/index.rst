@@ -3,18 +3,22 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to ceeder's documentation!
-==================================
+Ceeder: a framework for CDRs and analytics
+===========================================
+
+Release v\ |version|. (:ref:`Installation <install>`)
+
+**ceeder** is a library that makes working with CDRs and analytics easier.
+
+**Example code**::
+
+  >>> from seeder import validate
+
+
+User guide
+-------------------
 
 .. toctree::
    :maxdepth: 2
-   :caption: Contents:
 
-
-
-Indices and tables
-==================
-
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
+   install
