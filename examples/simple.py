@@ -2,7 +2,7 @@ import falcon
 
 from typing import List, Dict
 
-from seeder import TagAnnotator, FacetAnnotator
+from seeder import TagAnnotator
 
 
 def txt_to_cdr_tags(_) -> List:

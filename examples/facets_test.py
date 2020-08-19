@@ -3,7 +3,7 @@ import json
 import pytest
 from falcon import testing
 
-from seeder import cdr, validate
+from seeder import cdr, validate, FacetAnnotator
 
 
 def create_facet():
