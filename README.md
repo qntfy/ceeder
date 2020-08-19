@@ -2,6 +2,7 @@
 
 <a href="https://github.com/qntfy/ceeder/actions"><img alt="Actions Status" src="https://github.com/qntfy/ceeder/workflows/Tests/badge.svg"></a>
 [![Documentation](https://readthedocs.org/projects/ceeder/badge/?version=latest)](https://ceeder.readthedocs.io/en/latest/?badge=latest)
+[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 
 
 `ceeder` is a library intended to make working with

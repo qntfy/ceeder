@@ -7,14 +7,12 @@ from seeder import TagAnnotator
 
 def txt_to_cdr_tags(_) -> List:
     entity_dict = {}
-    entity_dict['offset_start'] = 0
-    entity_dict['offset_end'] = 1
-    entity_dict['tag'] = 'LOC'
+    entity_dict["offset_start"] = 0
+    entity_dict["offset_end"] = 1
+    entity_dict["tag"] = "LOC"
     return [entity_dict]
 
 
 def create_tag():
-    tag_anno = TagAnnotator(txt_to_cdr_tags,
-                            label='simple analytic',
-    )
+    tag_anno = TagAnnotator(txt_to_cdr_tags, label="simple analytic",)
     return tag_anno.create()
