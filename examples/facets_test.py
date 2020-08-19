@@ -16,14 +16,13 @@ def create_facet():
 
 @pytest.fixture()
 def client():
-    # Take  function `create` from `simple.py` in this folder.
     return testing.TestClient(create_facet())
 
 
 def test_get_message(client):
     sample_cdr = cdr(extracted_text='Hello world!!!')
 
-    # perform a POST request, as one would in CURL
+    # perform a POST request, as one would in curl
     result = client.simulate_post('/api/v1/annotate/cdr', json=sample_cdr)
     output = result.json
     assert output['label'] == 'facet analytic'
