@@ -18,11 +18,3 @@ def create_tag():
                             label='simple analytic',
     )
     return tag_anno.create()
-
-
-def create_facet():
-    fx = lambda x: [{'value': "hello", 'confidence': 0.99}]
-    anno = FacetAnnotator(fx,
-                          label='facet analytic',
-    )
-    return anno.create()

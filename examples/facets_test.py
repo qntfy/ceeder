@@ -4,7 +4,14 @@ import pytest
 from falcon import testing
 
 from seeder import cdr, validate
-from simple import create_facet
+
+
+def create_facet():
+    fx = lambda x: [{'value': "hello", 'confidence': 0.99}]
+    anno = FacetAnnotator(fx,
+                          label='facet analytic',
+    )
+    return anno.create()
 
 
 @pytest.fixture()
