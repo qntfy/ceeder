@@ -1,6 +1,6 @@
 # seeder
 
-<a href="https://github.com/qntfy/ceeder/actions"><img alt="Actions Status" src="https://github.com/qntfy/ceeder/workflows/Test/badge.svg"></a>
+<a href="https://github.com/qntfy/ceeder/actions"><img alt="Actions Status" src="https://github.com/qntfy/ceeder/workflows/Tests/badge.svg"></a>
 [![Documentation](https://readthedocs.org/projects/ceeder/badge/?version=latest)](https://ceeder.readthedocs.io/en/latest/?badge=latest)
 
 
