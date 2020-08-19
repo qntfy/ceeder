@@ -10,9 +10,22 @@ Release v\ |version|. (:ref:`Installation <install>`)
 
 **ceeder** is a library that makes working with CDRs and analytics easier.
 
-**Example code**::
+**Example code (validation)**::
 
+  >>> from seeder import cdr
+  >>> cdr()
+  {'uri': 'https://qntfy.com',...
   >>> from seeder import validate
+  >>> validate(cdr())
+  >>> validate({"hello": "world"})
+  Traceback (most recent call last):
+      ...
+  jsonschema.exceptions.ValidationError: 'uri' is a required property
+
+  Failed validating 'required' in schema:
+      ...
+  On instance:
+    {'hello': 'world'}
 
 
 User guide
@@ -22,3 +35,4 @@ User guide
    :maxdepth: 2
 
    install
+   basics
