@@ -2,7 +2,7 @@ import falcon
 
 from typing import List, Dict
 
-from seeder import TagAnnotator
+from ceeder import TagAnnotator
 
 
 def txt_to_cdr_tags(_) -> List:
@@ -10,7 +10,7 @@ def txt_to_cdr_tags(_) -> List:
     entity_dict["offset_start"] = 0
     entity_dict["offset_end"] = 1
     entity_dict["tag"] = "LOC"
-    return [entity_dict]
+    return ([entity_dict], falcon.HTTP_200)
 
 
 def create_tag():

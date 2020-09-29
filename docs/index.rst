@@ -12,10 +12,10 @@ Release v\ |version|. (:ref:`Installation <install>`)
 
 **Example code (validation)**::
 
-  >>> from seeder import cdr
+  >>> from ceeder import cdr
   >>> cdr()
   {'uri': 'https://qntfy.com',...
-  >>> from seeder import validate
+  >>> from ceeder import validate
   >>> validate(cdr())
   >>> validate({"hello": "world"})
   Traceback (most recent call last):

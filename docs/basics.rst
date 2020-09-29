@@ -15,7 +15,7 @@ Use the `validate(dict)` function to validate a CDR-like dict.
 `validate` throws an exception if any issues are found,
 such as a missing required field.
 
-  >>> from seeder import cdr, validate
+  >>> from ceeder import cdr, validate
   >>> validate(cdr())
   >>> validate({"hello": "world"}
   Traceback (most recent call last):

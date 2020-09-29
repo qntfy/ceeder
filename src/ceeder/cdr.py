@@ -31,7 +31,7 @@ def schema() -> Dict:
     from pkg_resources import resource_string
     import json
 
-    data = resource_string("seeder.schemas", "cdr-v4.json")
+    data = resource_string("ceeder.schemas", "cdr-v4.json")
     return json.loads(data)
 
 

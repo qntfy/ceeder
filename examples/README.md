@@ -1,6 +1,6 @@
-# seeder examples
+# ceeder examples
 
-This directory shows an extremely simple usage pattern for the `seeder`
+This directory shows an extremely simple usage pattern for the `ceeder`
 library.
 
 Write a function that takes in a `string` (the `extracted_text` field from the CDR)

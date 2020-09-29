@@ -3,7 +3,7 @@ import json
 import pytest
 from falcon import testing
 
-from seeder import cdr, validate
+from ceeder import cdr, validate
 from simple import create_tag
 
 

@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "ceeder"
-version = "0.0.3"
+version = "1.0.0"
 description = "Library for working with CDR files and analytics."
 authors = ["max thomas <max@qntfy.com>"]
 
@@ -13,7 +13,7 @@ homepage = "https://github.com/qntfy/ceeder"
 keywords = ['ceeder', 'cdr']
 
 packages = [
-    { include = "seeder", from = "src" },
+    { include = "ceeder", from = "src" },
 ]
 
 

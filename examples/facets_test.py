@@ -1,13 +1,14 @@
 import json
 
 import pytest
-from falcon import testing
 
-from seeder import cdr, validate, FacetAnnotator
+from falcon import testing, HTTP_200
+
+from ceeder import cdr, validate, FacetAnnotator
 
 
 def create_facet():
-    fx = lambda x: [{"value": "hello", "confidence": 0.99}]
+    fx = lambda x: ([{"value": "hello", "confidence": 0.99}], HTTP_200)
     anno = FacetAnnotator(fx, label="facet analytic",)
     return anno.create()
 

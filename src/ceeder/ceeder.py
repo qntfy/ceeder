@@ -65,11 +65,15 @@ class TagAnnotator(Annotator):
         txt = request_json["extracted_text"]
         logging.debug("incoming text: {}".format(txt))
         output = {}
-        output["content"] = self.annotate_function(txt)
+        content, code = self.annotate_function(txt)
+        output["content"] = content
         output["type"] = self.annotator_type
         output["label"] = self.label
         output["version"] = self.version
+
         resp.media = output
+        if code:
+            resp.status = code
 
 
 class FacetAnnotator(Annotator):
@@ -99,9 +103,13 @@ class FacetAnnotator(Annotator):
     def on_post(self, req, resp):
         request_json = req.media
         output = {}
-        output["content"] = self.annotate_function(request_json)
+        content, code = self.annotate_function(request_json)
+        output["content"] = content
         output["type"] = self.annotator_type
         output["class"] = self.annotator_class
         output["label"] = self.label
         output["version"] = self.version
+
         resp.media = output
+        if code:
+            resp.status = code
