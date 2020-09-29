@@ -9,7 +9,10 @@ from ceeder import cdr, validate, FacetAnnotator
 
 def create_facet():
     fx = lambda x: ([{"value": "hello", "confidence": 0.99}], HTTP_200)
-    anno = FacetAnnotator(fx, label="facet analytic",)
+    anno = FacetAnnotator(
+        fx,
+        label="facet analytic",
+    )
     return anno.create()
 
 

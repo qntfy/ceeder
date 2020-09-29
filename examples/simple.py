@@ -14,5 +14,8 @@ def txt_to_cdr_tags(_) -> List:
 
 
 def create_tag():
-    tag_anno = TagAnnotator(txt_to_cdr_tags, label="simple analytic",)
+    tag_anno = TagAnnotator(
+        txt_to_cdr_tags,
+        label="simple analytic",
+    )
     return tag_anno.create()

@@ -35,7 +35,7 @@ class Annotator(ABC):
         post_endpoint="/api/v1/annotate/cdr",
     ):
         """Create returns a falcon API object, which can be used immediately to
-provide Falcon-based functionality."""
+        provide Falcon-based functionality."""
 
         app = falcon.API()
         app.add_route(health_endpoint, health_impl)
@@ -53,7 +53,11 @@ class TagAnnotator(Annotator):
     """
 
     def __init__(
-        self, annotate_function, label, annotator_type="tags", version="0.0.1",
+        self,
+        annotate_function,
+        label,
+        annotator_type="tags",
+        version="0.0.1",
     ):
         self.annotate_function = annotate_function
         self.label = label
