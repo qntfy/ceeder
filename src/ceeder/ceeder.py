@@ -8,6 +8,11 @@ import falcon
 from abc import ABC, abstractmethod
 
 
+def version_from_env():
+    vers = os.getenv("APP_VERSION")
+    return vers if vers else "latest"
+
+
 class HealthResource:
     """HealthResource supplies a simple Falcon health-check class."""
 
@@ -57,7 +62,7 @@ class TagAnnotator(Annotator):
         annotate_function,
         label,
         annotator_type="tags",
-        version="0.0.1",
+        version=version_from_env(),
     ):
         self.annotate_function = annotate_function
         self.label = label
@@ -96,7 +101,7 @@ class FacetAnnotator(Annotator):
         label,
         annotator_type="facets",
         annotator_class="derived",
-        version="0.0.1",
+        version=version_from_env(),
     ):
         self.annotate_function = annotate_function
         self.label = label

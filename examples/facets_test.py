@@ -1,5 +1,5 @@
 import json
-
+import os
 import pytest
 
 from falcon import testing, HTTP_200
@@ -29,6 +29,7 @@ def test_get_message(client):
     output = result.json
     assert output["label"] == "facet analytic"
     assert output["type"] == "facets"
+    assert output["version"] == "latest"
     sample_cdr["annotators"] = output
     validate(sample_cdr)
 
